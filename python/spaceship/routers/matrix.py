@@ -5,8 +5,8 @@ router = APIRouter()
 
 @router.get('')
 def matrix() -> dict:
-    mat1 = np.random.randint(10, size=[10, 10])
-    mat2 = np.random.randint(10, size=[10, 10])
+    mat1 = np.random.randint(100, size=[10, 10])
+    mat2 = np.random.randint(100, size=[10, 10])
     resMat = np.matmul(mat1, mat2)
     mat1 = np.array2string(mat1)
     mat2 = np.array2string(mat2)
