@@ -1,0 +1,5 @@
+fastapi
+pydantic
+starlette
+numpy
+uvicorn[standard]
