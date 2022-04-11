@@ -1,0 +1,20 @@
+{
+  "name": "architecturesoftware_lab3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:python": "cd python && docker build -f Dockerfile -t lab3:01 . && docker run --rm -it -p 3000:8080 lab3:01"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Er4ik/ArchitectureSoftware_Lab3.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Er4ik/ArchitectureSoftware_Lab3/issues"
+  },
+  "homepage": "https://github.com/Er4ik/ArchitectureSoftware_Lab3#readme"
+}
