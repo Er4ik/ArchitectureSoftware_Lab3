@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:python": "cd python && docker build -f Dockerfile -t lab3:01 . && docker run --rm -it -p 3000:8080 lab3:01"
+    "start:python": "cd python && docker build -f Dockerfile -t lab3:01 . && docker run --rm -it -p 3000:8080 lab3:01",
+    "start:go_v1": "cd go && docker build -f Dockerfile.V1 -t lab3:01 . && docker run --rm -it -p 3000:8080 lab3:01",
+    "start:go_v2": "cd go && docker build -f Dockerfile.V2 -t lab3:02 . && docker run --rm -it -p 3000:8080 lab3:02",
+    "start:go_v3": "cd go && docker build -f Dockerfile.V3 -t lab3:03 . && docker run --rm -it -p 3000:8080 lab3:03"
   },
   "repository": {
     "type": "git",

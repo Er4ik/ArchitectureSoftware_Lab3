@@ -2,16 +2,16 @@ FROM golang:1.18 as builder
 
 WORKDIR /goApp
 
-COPY . .
+COPY /templates/index.html /goApp/templates/index.html
+COPY /lib /goApp/lib
+COPY . /goApp
 
 RUN go mod download
-
 RUN CGO_ENABLED=0 go build -o build/fizzbuzz
 
+
 FROM scratch
+COPY --from=builder goApp/build/fizzbuzz /fizzbuzz
+COPY --from=0 /goApp/templates /templates
 
-WORKDIR /app
-
-COPY --from=builder goApp/build/fizzbuzz build/
-
-CMD [ "./build/fizzbuzz", "serve" ]
+CMD [ "/fizzbuzz", "serve" ]
