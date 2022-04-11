@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:python": "cd python && docker build -f Dockerfile -t lab3:01 . && docker run --rm -it -p 3000:8080 lab3:01",
-    "start:go_v1": "cd go && docker build -f Dockerfile.V1 -t lab3:01 . && docker run --rm -it -p 3000:8080 lab3:01",
-    "start:go_v2": "cd go && docker build -f Dockerfile.V2 -t lab3:02 . && docker run --rm -it -p 3000:8080 lab3:02",
-    "start:go_v3": "cd go && docker build -f Dockerfile.V3 -t lab3:03 . && docker run --rm -it -p 3000:8080 lab3:03"
+    "start:python": "cd python && docker build -f Dockerfile -t lab3:11 . && docker run --rm -it -p 80:8080 lab3:11",
+    "start:go_v1": "cd go && docker build -f Dockerfile.V1 -t lab3:21 . && docker run --rm -it -p 3000:8080 lab3:21",
+    "start:go_v2": "cd go && docker build -f Dockerfile.V2 -t lab3:22 . && docker run --rm -it -p 3001:8080 lab3:22",
+    "start:go_v3": "cd go && docker build -f Dockerfile.V3 -t lab3:23 . && docker run --rm -it -p 5000:8080 lab3:23",
+    "start:js": "cd js && docker build -f Dockerfile -t lab3:31 . && docker run --rm -it -p 5001:3000 lab3:31"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
+}
+
+h1 {
+  font-size: 52px;
+  font-family: "Mukta";
+}
+
+.App h1>span {
+  color: orangered;
+}
+
+.App h1>span:hover {
+  cursor: pointer;
+}
