@@ -1,0 +1,9 @@
+FROM golang:1.18
+
+WORKDIR /goApp
+
+COPY . /goApp
+
+RUN go build -o build/fizzbuzz
+
+CMD [ "./build/fizzbuzz", "serve" ]

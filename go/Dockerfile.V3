@@ -1,0 +1,17 @@
+FROM golang:1.18 as builder
+
+WORKDIR /goApp
+
+COPY . .
+
+RUN go mod download
+
+RUN CGO_ENABLED=0 go build -o build/fizzbuzz
+
+FROM gcr.io/distroless/static-debian11
+
+WORKDIR /app
+
+COPY --from=builder goApp/build/fizzbuzz build/
+
+CMD [ "./build/fizzbuzz", "serve" ]
